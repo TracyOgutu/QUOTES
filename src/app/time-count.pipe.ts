@@ -13,16 +13,7 @@ export class TimeCountPipe implements PipeTransform {
       var dateDifference = Math.abs(value - todayWithNoTime) //returns value in miliseconds
       const secondsInDay = 86400; //60 seconds * 60 minutes in an hour * 24 hours in a day
       var dateDifferenceSeconds = dateDifference*0.001; //converts miliseconds to seconds
-
-      // return dateDifferenceSeconds;
-
-      // // if (dateDifferenceSeconds<=86400){
-      // //   return dateDifferenceSeconds/60;
-
-      // // }
-
       var dateCounter = dateDifferenceSeconds/secondsInDay;
-
       if (dateCounter >= 1 && value > todayWithNoTime){
         return dateCounter;
       }else{
@@ -31,3 +22,9 @@ export class TimeCountPipe implements PipeTransform {
   }
 
 }
+// return dateDifferenceSeconds;
+
+      // // if (dateDifferenceSeconds<=86400){
+      // //   return dateDifferenceSeconds/60;
+
+      // // }

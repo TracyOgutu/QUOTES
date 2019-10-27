@@ -21,15 +21,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+  
 </head>
+
 <body>
     
         
     <div class="container">
         <h1 id ="quoteshub">Quotes Hub</h1>
-        <!-- <div class="card">
-            <img src = "../haflalogoaziz.png" alt="quotegif" height="300px;" width="300px;">
-        </div> -->
+        <!-- <img src = "../haflalogoaziz.png" alt="quotegif" height="300px;" width="300px;"> -->
+           
+        
        
         <hr>
       
@@ -45,6 +50,7 @@
               <div *ngIf='quote.showDescription'>
                 <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)' (yesUpvote)='makeUpvote($event,i)'
                  (yesDownvote)='makeDownvote($event,i)'></app-quote-detail>
+                 
               </div>
             </div>
           </div>

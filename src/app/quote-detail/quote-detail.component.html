@@ -16,12 +16,14 @@
          <!-- <button (click)= 'quoteComplete(true)'>Complete</button> -->
          <p>This quote was posted {{quote.completeDate|timeCount}} days ago</p>
          
+         <div ng-init="upvote=1;downvote=5">
+               <button (click)='quoteUpvote' class="btn btn-primary" ng-model="upvote"> Upvote</button>
+               {{upvote}}
+               <button (click)='quoteDownvote' class="btn btn-primary ml-3" ng-model="downvote" >Downvote</button> <br><br>
          
-               <button (click)='quoteUpvote' class="btn btn-primary" > Upvote</button>
+
+         </div>
                
-               
-               <button (click)='quoteDownvote' class="btn btn-primary ml-3" >Downvote</button> <br><br>
-         
          
          <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
 </body>

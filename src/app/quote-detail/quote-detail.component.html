@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+<body>
+      <p>
+    
+            Coined by: {{quote.author}} <br>
+            Posted by:{{quote.user}}
+             
+         </p>
+         <!-- <button (click)= 'quoteComplete(true)'>Complete</button> -->
+         <p>This quote was posted {{quote.completeDate|timeCount}} days ago</p>
+         
+         
+               <button (click)='quoteUpvote' class="btn btn-primary" > Upvote</button>
+               
+               
+               <button (click)='quoteDownvote' class="btn btn-primary ml-3" >Downvote</button> <br><br>
+         
+         
+         <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+</body>
+</html>

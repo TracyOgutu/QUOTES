@@ -1,0 +1,58 @@
+
+<!-- <div>
+    <h1>Quotes Hub</h1>
+    <hr>
+    <ul>
+      <div *ngFor='let quote of quotes;let i = index'>
+
+        <li>{{quote.name}} posted on {{quote.completeDate|date|uppercase}}</li>
+         <li appHighlight>{{quote.name}}</li> 
+        <button (click)='toggleDetails(i)'>Toggle Details</button>
+        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+      </div>
+    </ul>
+    <p *ngIf='quotes.length > 5'>You have too many quotes</p>
+</div> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Quotes Hub</h1>
+        <hr>
+      
+        <div class="row">
+          <div class="col-md-6">
+            <div *ngFor='let quote of quotes;let i = index'>
+              <div>
+                <h2 id={{i}} >{{quote.description}}</h2>
+                 <!-- <h4>posted on {{quote.completeDate|date|uppercase}} by {{quote.user}}</h4>     -->
+                <button (click)='toggleDetails(i)' class="btn btn-success">Quote Details</button>
+              </div>
+      
+              <div *ngIf='quote.showDescription'>
+                <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)' (yesUpvote)='makeUpvote($event,i)'
+                 (yesDownvote)='makeDownvote($event,i)'></app-quote-detail>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+                <app-quote-form (addQuote) ="addNewQuote($event)"></app-quote-form>
+                
+              </div>
+        </div>
+      
+       
+      </div>
+
+  
+</body>
+</html>
+
+  

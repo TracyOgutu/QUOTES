@@ -1,0 +1,63 @@
+
+<div class="container-fluid">
+        <h2 class="text-center">Post your favorite Quote</h2>
+        <hr>
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+                
+            
+            <div class="form-group">
+      
+                <label for="description">Quote</label>
+                <textarea class="form-control" id="description" rows="4" 
+                [(ngModel)]="newQuote.description" name="description" #description='ngModel' required></textarea>
+
+                <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                    <p>Quote is required</p>
+                </div>
+      
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="complete">Today's date</label>
+                <input type='date' id="complete"
+                 [(ngModel)]="newQuote.completeDate" name ="completeDate" #completeDate='ngModel'required>
+
+                 <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+                    <p>Date is required</p>
+                 </div>
+      
+            </div>
+
+            <div class="form-group">
+      
+                <label for="author">Name of author:</label>
+                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" 
+                name="author" #author='ngModel'>
+                Display {{newQuote.author}}
+                <div [hidden]="author.valid || author.pristine" class ="alert alert-danger" >
+                    <p>Author name is required</p>
+
+                </div>
+      
+            </div>
+
+            <div class="form-group">
+      
+                <label for="user">Your name:</label>
+                <input type="text" required class="form-control" id="user" [(ngModel)]="newQuote.user" 
+                name="user" #user='ngModel' >
+                Display {{newQuote.user}}
+
+                <div [hidden]="user.valid || user.pristine" class="alert alert-danger">
+                       <p>Your name is required</p>
+
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-success">Add Quote</button>
+
+
+        </form>
+      </div>

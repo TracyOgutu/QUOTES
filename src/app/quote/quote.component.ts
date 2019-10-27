@@ -10,7 +10,7 @@ export class QuoteComponent implements OnInit {
   title = 'quotes';
   
   quotes:Quote[]=[
-    new Quote(1,'There is only one happiness in life - to love and to be loved.',new Date(2020,3,14),'George Sand','Rita'),
+    new Quote(1,'There is only one happiness in life - to love and to be loved.',new Date(2019,3,14),'George Sand','Rita'),
     new Quote(2,'Only a life lived for others is a life worthwhile',new Date(2018,6,9),'Albert Einstein','Zoey'),
     new Quote(3,'Expect nothing, live frugally on surprise',new Date(2019,1,12),'Alice Walker','Shivan'),
     // new Quote(4,'Everything has beauty, but not everyone sees it.',new Date(2019,1,18),'Confucius','Abe'),

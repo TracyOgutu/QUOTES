@@ -7,6 +7,11 @@ body{
     font-size:50px;
     font-family: 'Rock Salt', cursive;
     text-align: center;
+    background-image: url(../../quotehub2.gif);
+    height:150px;
+    background-repeat: no-repeat;
+    margin-left:33%;
+    
     
 
 }

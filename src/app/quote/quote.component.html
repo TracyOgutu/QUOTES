@@ -33,6 +33,7 @@
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
             <h2 id={{i}}>{{quote.description}}</h2>
+            <h2 id={{i}} class="datepost">Posted {{quote.completeDate|date}}</h2>
             <div>
               <app-votes></app-votes>
             </div>

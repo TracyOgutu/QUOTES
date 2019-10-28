@@ -37,27 +37,6 @@ export class QuoteComponent implements OnInit {
   
   }
 
-
-  
-  // makeUpvote(yesUpvote,index){
-
-  //   if(yesUpvote){
-  //     index = 0;
-  //     index+1;
-  //     return index;
-  //   }
-    
-  // }
-  // makeDownvote(yesDownvote,index){
-
-  //   if(yesDownvote){
-  //     let count = 0;
-  //     count+1;
-  //     return count;
-  //   }
-    
-  // }
-
   // highlightQuote(){
   //   let upvoteArr:number[]=[];
   //   for(let i of this.quotes){
@@ -78,6 +57,7 @@ export class QuoteComponent implements OnInit {
 //     downvote +=1;
 //     return false;
 //   }
+
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import{Quote} from '../quote'
+
 
 @Component({
   selector: 'app-votes',
@@ -7,17 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VotesComponent implements OnInit {
 
-  numberOfUpvotes:number=0;
-  numberOfDownvotes:number=0;
+  @Input() quote:Quote;
+  vote =0;
 
-  upvoteButtonClick(){
-   this.numberOfUpvotes++;
-
+  upVote():boolean{
+    this.quote.upvote +=1;
+    return false;
   }
 
-  downvoteButtonClick(){
-    this.numberOfDownvotes++;
+  downVote():boolean{
+    this.quote.downvote +=1;
+    return false;
   }
+  // numberOfUpvotes:number=0;
+  // numberOfDownvotes:number=0;
+
+  // upvoteButtonClick(){
+  //  this.numberOfUpvotes++;
+
+  // }
+
+  // downvoteButtonClick(){
+  //   this.numberOfDownvotes++;
+  // }
 
   constructor() { }
 

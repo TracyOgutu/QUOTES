@@ -40,6 +40,10 @@
         <hr>
       
         <div class="row">
+          <div appHighlight *ngIf="highlightQuote().upvote !==0">
+            <p>{{highlightQuote().description}}</p>
+
+          </div>
           <div class="col-md-6">
             <div *ngFor='let quote of quotes;let i = index'>
               <div>

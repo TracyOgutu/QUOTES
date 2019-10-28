@@ -1,7 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,57 +11,43 @@
   <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
-  
+
 </head>
 
 <body>
-    
-        
-    <div class="container-fluid">
-        <h1 id ="quoteshub"></h1>
-        
-       
-       
-        <hr>
-      
-        <div class="row">
-          
-          <div class="col-md-6">
-              <!-- <div appHighlight *ngIf="highlightQuote().upvote !==0">
+
+
+  <div class="container-fluid">
+
+    <h1 id="quoteshub"></h1>
+
+    <hr>
+
+    <div class="row">
+
+      <div class="col-md-6">
+        <!-- <div appHighlight *ngIf="highlightQuote().upvote !==0">
                   <p>{{highlightQuote().description}}</p>
       
                 </div> -->
-
-            <div *ngFor='let quote of quotes;let i = index'>
-              <div>
-                <h2 id={{i}} >{{quote.description}}</h2>
-                <div>
-                  
-
-                  <app-votes ></app-votes>
-                </div>
-               
-                <button (click)='toggleDetails(i)' class="btn btn-success" id="quotedetails">Quote Details</button>
-              </div>
-      
-              <div *ngIf='quote.showDescription'>
-                <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)' 
-                 ></app-quote-detail>
-                 
-              </div>
+        <div *ngFor='let quote of quotes;let i = index'>
+          <div>
+            <h2 id={{i}}>{{quote.description}}</h2>
+            <div>
+              <app-votes></app-votes>
             </div>
+            <button (click)='toggleDetails(i)' class="btn btn-success" id="quotedetails">Quote Details</button>
           </div>
-          <div class="col-md-6">
-                <app-quote-form (addQuote) ="addNewQuote($event)"></app-quote-form>
-                
-              </div>
+          <div *ngIf='quote.showDescription'>
+            <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+          </div>
         </div>
-     
-       
       </div>
-
-  
+      <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
+    </div>
+  </div>
 </body>
-</html>
 
-  
+</html>

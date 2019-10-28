@@ -1,38 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Document</title>
-   <link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Rouge+Script&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Rouge+Script&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
       <div class="container-fluid">
-                  <p>
-    
-                              Coined by: {{quote.author}} <br>
-                              Posted by:{{quote.user}}
-                               
-                           </p>
-                           <!-- <button (click)= 'quoteComplete(true)'>Complete</button> -->
-                           <p id="time">This quote was posted {{quote.completeDate|timeCount}} days ago</p>
-                           
-                           <div>
-                                 <!-- <button (click)='quoteUpvote' class="btn btn-primary"> Upvote</button>
-                                 <button (click)='quoteDownvote' class="btn btn-warning ml-3">Downvote</button>  -->
-                                 <button (click)= 'quoteDelete(true)' class="btn btn-danger ml-3">Delete Quote</button>
-                  
-                           </div>
+            <p>
+                  Coined by: {{quote.author}} <br>
+                  Posted by:{{quote.user}}
+            </p>
+            <p id="time">This quote was posted {{quote.completeDate|timeCount}} days ago</p>
 
+            <div>
+                  <button (click)='quoteDelete(true)' class="btn btn-danger ml-3">Delete Quote</button>
+            </div>
       </div>
 
-      
-               
-         
-        
 </body>
+
 </html>

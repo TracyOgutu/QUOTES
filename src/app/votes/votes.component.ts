@@ -12,6 +12,7 @@ export class VotesComponent implements OnInit {
 
   upvoteButtonClick(){
    this.numberOfUpvotes++;
+
   }
 
   downvoteButtonClick(){

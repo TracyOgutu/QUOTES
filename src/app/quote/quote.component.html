@@ -30,7 +30,7 @@
 <body>
     
         
-    <div class="container">
+    <div class="container-fluid">
         <h1 id ="quoteshub"></h1>
         
         <!-- <img src = "../../quotes.gif" alt="quotegif" style="width:500px;height:600px;"></img>
@@ -40,16 +40,24 @@
         <hr>
       
         <div class="row">
-          <div appHighlight *ngIf="highlightQuote().upvote !==0">
-            <p>{{highlightQuote().description}}</p>
-
-          </div>
+          
           <div class="col-md-6">
+              <!-- <div appHighlight *ngIf="highlightQuote().upvote !==0">
+                  <p>{{highlightQuote().description}}</p>
+      
+                </div> -->
+
             <div *ngFor='let quote of quotes;let i = index'>
               <div>
                 <h2 id={{i}} >{{quote.description}}</h2>
                 <div>
-                  <app-votes></app-votes>
+                   <!-- <div>
+                <span><button (click) ="upVote(i)">Upvote </button><button>{{quote.upvote}}</button></span>   
+             
+                 <span><button (click)="downVote(i)">Downvote</button><button>{{quote.downvote}}</button></span>  
+        </div> -->
+
+                  <app-votes ></app-votes>
                 </div>
                  <!-- <h4>posted on {{quote.completeDate|date|uppercase}} by {{quote.user}}</h4>     -->
                 <button (click)='toggleDetails(i)' class="btn btn-success" id="quotedetails">Quote Details</button>

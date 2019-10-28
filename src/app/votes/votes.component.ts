@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,Output,EventEmitter } from '@angular/core';
 
-import{Quote} from '../quote'
+import{Quote} from '../quote';
 
 
 @Component({
@@ -10,29 +10,35 @@ import{Quote} from '../quote'
 })
 export class VotesComponent implements OnInit {
 
-  @Input() quote:Quote;
-  vote =0;
+  @Input() quote: Quote;
+  
+  // upVote():boolean{
+  //   this.quote.upvote +=1;
+  //   return false;
+  // }numberOfUpvotes:number=0;
+  // // numberOfDownvotes:number=0;
 
-  upVote():boolean{
-    this.quote.upvote +=1;
-    return false;
-  }
-
-  downVote():boolean{
-    this.quote.downvote +=1;
-    return false;
-  }
-  // numberOfUpvotes:number=0;
-  // numberOfDownvotes:number=0;
-
-  // upvoteButtonClick(){
-  //  this.numberOfUpvotes++;
-
+  // downVote():boolean{
+  //   this.quote.downvote +=1;
+  //   return false;
   // }
+  
+  // numberOfUpvotes:any =new Quote(0,"",new Date(),"","",0,0);
+  
+  // @Output()makeVote=new EventEmitter<Quote>();
 
-  // downvoteButtonClick(){
-  //   this.numberOfDownvotes++;
-  // }
+  
+  
+  numberOfUpvotes:any=0;
+  numberOfDownvotes:number=0;
+
+    upvoteButtonClick(){ 
+      this.numberOfUpvotes++;
+    }
+
+    downvoteButtonClick(){
+      this.numberOfDownvotes++;
+    }
 
   constructor() { }
 

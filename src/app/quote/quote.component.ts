@@ -10,9 +10,9 @@ export class QuoteComponent implements OnInit {
   title = 'quotes';
   
   quotes:Quote[]=[
-    new Quote(1,'There is only one happiness in life - to love and to be loved.',new Date(2019,10,27),'George Sand','Rita',3,3),
-    new Quote(2,'Only a life lived for others is a life worthwhile',new Date(),'Albert Einstein','Zoey',4,4),
-    new Quote(3,'Expect nothing, live frugally on surprise',new Date(),'Alice Walker','Shivan',5,5),
+    new Quote(1,'There is only one happiness in life - to love and to be loved.',new Date(2019,3,27),'George Sand','Rita',0,0),
+    new Quote(2,'Only a life lived for others is a life worthwhile',new Date(2019,1,27),'Albert Einstein','Zoey',0,0),
+    new Quote(3,'Expect nothing, live frugally on surprise',new Date(2019,6,27),'Alice Walker','Shivan',0,0),
     // new Quote(4,'Everything has beauty, but not everyone sees it.',new Date(2019,1,18),'Confucius','Abe'),
     // new Quote(5,'Where there is love there is life.',new Date(2019,1,18),'Mahatma Gandhi','Gabriel'),
     // new Quote(6,'The only way to have a friend is to be one.',new Date(2019,1,18),'Ralph Waldo Emerson','Earl'),
@@ -57,17 +57,26 @@ export class QuoteComponent implements OnInit {
     
   // }
 
-  highlightQuote(){
-    let upvoteArr:number[]=[];
-    for(let i of this.quotes){
-      upvoteArr.push(i.upvote);
-    }
-    let maxvote = Math.max(...upvoteArr);
-    let highestQuotedVote = this.quotes.find(quote=>quote.upvote===maxvote);
-    return highestQuotedVote;
-  }
+  // highlightQuote(){
+  //   let upvoteArr:number[]=[];
+  //   for(let i of this.quotes){
+  //     upvoteArr.push(i.upvote);
+  //   }
+  //   let maxvote = Math.max(...upvoteArr);
+  //   let highestQuotedVote = this.quotes.find(quote=>quote.upvote===maxvote);
+  //   return highestQuotedVote;
+  // }
 
+//  upVote():boolean{
+//     this.upvote +=1;
+//     return false;
+//   }numberOfUpvotes:number=0;
+//   // numberOfDownvotes:number=0;
 
+//   downVote():boolean{
+//     downvote +=1;
+//     return false;
+//   }
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;

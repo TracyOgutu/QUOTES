@@ -101,6 +101,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## LINK TO LIVE SITE ON GITHUB PAGES
-https://tracyogutu.github.io/
+https://tracyogutu.github.io/QUOTES/
 
 

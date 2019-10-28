@@ -29,7 +29,7 @@ export class VotesComponent implements OnInit {
 
   
   
-  numberOfUpvotes:any=0;
+  numberOfUpvotes:number=0;
   numberOfDownvotes:number=0;
 
     upvoteButtonClick(){ 

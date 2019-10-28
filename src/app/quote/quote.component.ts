@@ -38,6 +38,7 @@ export class QuoteComponent implements OnInit {
   }
 
 
+  
   // makeUpvote(yesUpvote,index){
 
   //   if(yesUpvote){

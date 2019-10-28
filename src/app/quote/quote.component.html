@@ -35,23 +35,18 @@
               <div>
                 <h2 id={{i}} >{{quote.description}}</h2>
                 <div>
-                   <!-- <div>
-                <span><button (click) ="upVote(i)">Upvote </button><button>{{quote.upvote}}</button></span>   
-             
-                 <span><button (click)="downVote(i)">Downvote</button><button>{{quote.downvote}}</button></span>  
-        </div> -->
+                  
 
                   <app-votes ></app-votes>
                 </div>
-                 <!-- <h4>posted on {{quote.completeDate|date|uppercase}} by {{quote.user}}</h4>     -->
+               
                 <button (click)='toggleDetails(i)' class="btn btn-success" id="quotedetails">Quote Details</button>
               </div>
       
               <div *ngIf='quote.showDescription'>
                 <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)' 
                  ></app-quote-detail>
-                 <!-- (yesUpvote)='makeUpvote($event,i)'
-                 (yesDownvote)='makeDownvote($event,i)' -->
+                 
               </div>
             </div>
           </div>

@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VotesComponent implements OnInit {
 
-  numberOfVotes:number;
+  numberOfUpvotes:number=0;
+  numberOfDownvotes:number=0;
 
   upvoteButtonClick(){
-   this.numberOfVotes++;
+   this.numberOfUpvotes++;
   }
 
   downvoteButtonClick(){
-    this.numberOfVotes--;
+    this.numberOfDownvotes++;
   }
 
   constructor() { }

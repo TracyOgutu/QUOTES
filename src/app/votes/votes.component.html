@@ -1,5 +1,9 @@
-<div>
-    <p>{{numberOfVotes}}</p>
-    <button (click)="upvoteButtonClick()">Upvote</button>
-    <button (click)="downvoteButtonClick()">Downvote</button>
-</div>
+
+
+<div class="card-body">
+
+    <button class="btn btn-warning" (click)="upvoteButtonClick()">Upvote {{numberOfUpvotes}}</button>
+
+    <button class="btn btn-danger" (click)="downvoteButtonClick()">Downvote {{numberOfDownvotes}}</button>
+   
+  </div>

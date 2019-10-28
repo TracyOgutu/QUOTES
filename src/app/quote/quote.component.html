@@ -48,7 +48,7 @@
                   <app-votes></app-votes>
                 </div>
                  <!-- <h4>posted on {{quote.completeDate|date|uppercase}} by {{quote.user}}</h4>     -->
-                <button (click)='toggleDetails(i)' class="btn btn-success">Quote Details</button>
+                <button (click)='toggleDetails(i)' class="btn btn-success" id="quotedetails">Quote Details</button>
               </div>
       
               <div *ngIf='quote.showDescription'>

@@ -49,9 +49,10 @@
               </div>
       
               <div *ngIf='quote.showDescription'>
-                <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)' (yesUpvote)='makeUpvote($event,i)'
-                 (yesDownvote)='makeDownvote($event,i)'></app-quote-detail>
-                 
+                <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)' 
+                 ></app-quote-detail>
+                 <!-- (yesUpvote)='makeUpvote($event,i)'
+                 (yesDownvote)='makeDownvote($event,i)' -->
               </div>
             </div>
           </div>
@@ -60,7 +61,9 @@
                 
               </div>
         </div>
-      
+      <div>
+        <app-votes></app-votes>
+      </div>
        
       </div>
 

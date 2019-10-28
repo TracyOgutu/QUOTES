@@ -18,16 +18,16 @@ export class QuoteDetailComponent implements OnInit {
     this.isComplete.emit(complete);
   }
 
-  quoteUpvote(upvote:boolean){
-    this.yesUpvote.emit(upvote);
+  // quoteUpvote(upvote:boolean){
+  //   this.yesUpvote.emit(upvote);
 
-  }
+  // }
   
-  quoteDownvote(downvote:boolean){
-    this.yesDownvote.emit(downvote);
+  // quoteDownvote(downvote:boolean){
+  //   this.yesDownvote.emit(downvote);
 
 
-  }
+  // }
 
   constructor() { }
 

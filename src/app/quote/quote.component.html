@@ -25,11 +25,13 @@
     <hr>
     <div class="row">
       <div class="col-md-6">
+       
         <div *ngFor='let quote of quotes;let i = index'>        
             <h2 class="datepost">Posted {{quote.completeDate|date}}</h2>
             <p *ngIf='quote.upvote==highest||quote.upvote>highest;else notHigh' appHighlight>
                 {{quote.description}} 
             </p>
+            
             <ng-template #notHigh>
               {{quote.description}}
             </ng-template>

@@ -68,7 +68,7 @@ devoting(index:number){
   this.quotes[index].downvote+=1;
   
 }
-highest:number=3;
+highest:number=5;
 
 
   addNewQuote(quote){

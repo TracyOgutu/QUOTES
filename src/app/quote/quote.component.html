@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -18,32 +18,28 @@
 
 
   <div class="container-fluid">
-
-    <div  class="row">
-        <div class="col-md-6" id="quoteshub">
-
-        </div>
-
-    </div>
-
-    <hr>
-
     <div class="row">
-
+      <div class="col-md-6" id="quoteshub">
+      </div>
+    </div>
+    <hr>
+    <div class="row">
       <div class="col-md-6">
-        <!-- <div appHighlight *ngIf="highlightQuote().upvote !==0">
-                  <p>{{highlightQuote().description}}</p>
-      
-                </div> -->
-        <div *ngFor='let quote of quotes;let i = index'>
-          <div>
-            <h2 id={{i}}>{{quote.description}}</h2>
-            <h2 id={{i}} class="datepost">Posted {{quote.completeDate|date}}</h2>
-            <div>
-              <app-votes></app-votes>
-            </div>
-            <button (click)='toggleDetails(i)' class="btn btn-success" id="quotedetails">Quote Details</button>
-          </div>
+        <div *ngFor='let quote of quotes;let i = index'>        
+            <h2 class="datepost">Posted {{quote.completeDate|date}}</h2>
+            <p *ngIf='quote.upvote==highest||quote.upvote>highest;else notHigh' appHighlight>
+                {{quote.description}} 
+            </p>
+            <ng-template #notHigh>
+              {{quote.description}}
+            </ng-template>
+            <div id="votebuttons"><br>
+              <button id="votebutton" class="btn btn-warning" (click)="voting(i)">Upvote {{quote.upvote}}</button>
+              <button id="votebutton" class="btn btn-danger" (click)="devoting(i)">Downvote {{quote.downvote}}</button>
+            </div><br>
+           
+            <button (click)='toggleDetails(i)' class="btn btn-success" id="quotedetails">Quote Details</button><br>
+          
           <div *ngIf='quote.showDescription'>
             <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
           </div>

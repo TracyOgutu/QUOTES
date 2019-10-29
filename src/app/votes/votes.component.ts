@@ -22,6 +22,22 @@ export class VotesComponent implements OnInit {
   //   this.quote.downvote +=1;
   //   return false;
   // }
+
+  voting(index:number){
+
+    // this.quotes[index].votes+=1;
+
+  }
+
+  devoting(index:number){
+     // this.quotes[index].votes-=1;
+    //  if (this.quotes[index].votes<0){
+    //   this.quotes[index].votes=0;
+    //  }
+  }
+  highestVoted(){
+    
+  }
   
   // numberOfUpvotes:any =new Quote(0,"",new Date(),"","",0,0);
   
@@ -29,6 +45,7 @@ export class VotesComponent implements OnInit {
 
   
   
+
   numberOfUpvotes:number=0;
   numberOfDownvotes:number=0;
 

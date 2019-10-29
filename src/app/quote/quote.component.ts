@@ -47,6 +47,7 @@ export class QuoteComponent implements OnInit {
   //   return highestQuotedVote;
   // }
 
+
 //  upVote():boolean{
 //     this.upvote +=1;
 //     return false;
@@ -57,6 +58,18 @@ export class QuoteComponent implements OnInit {
 //     downvote +=1;
 //     return false;
 //   }
+
+voting(index:number){
+
+  this.quotes[index].upvote+=1;
+
+}
+devoting(index:number){
+  this.quotes[index].downvote+=1;
+  
+}
+highest:number=3;
+
 
   addNewQuote(quote){
     let quoteLength = this.quotes.length;

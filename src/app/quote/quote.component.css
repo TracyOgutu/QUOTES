@@ -2,13 +2,13 @@ body{
     /* background-image: url(../../quotebg.jpg); */
     /* background-position: fixed; */
     font-family: 'Cookie', cursive;
-    font-size: 30px;
+    font-size: 40px;
 }
 .container-fluid{
     background-image: url(../../quotebg.jpg);
     background-position: fixed;
     font-family: 'Cookie', cursive;
-    font-size: 30px;
+    font-size: 50px;
     background-size: cover;
 }
 #quoteshub{
@@ -20,11 +20,19 @@ body{
     background-repeat: no-repeat;
     margin-left:33%;
     
-    
-
 }
-h2{
-    font-size: 50px;
+#votebuttons{
+    display:inline;
+    font-size:30px;
+   
+    
+}
+#votebutton{
+    align-content: center;
+    margin-left:10%;
+}
+p{
+    font-size: 50px !important;
 }
 button{
     font-size:30px;
@@ -32,8 +40,10 @@ button{
 }
 #quotedetails{
     margin-left:20%;
+    
 }
 .datepost{
     font-family: 'Times New Roman', Times, serif;
     font-size:20px;
 }
+

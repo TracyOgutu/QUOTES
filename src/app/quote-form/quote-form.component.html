@@ -21,7 +21,7 @@
                         [(ngModel)]="newQuote.description" name="description" #description='ngModel' required></textarea>
         
                         <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-                            <p>Quote is required</p>
+                            <!-- <p>Quote is required</p> -->
                         </div>
               
                     </div>
@@ -34,7 +34,7 @@
                          [(ngModel)]="newQuote.completeDate" name ="completeDate" #completeDate='ngModel'required>
         
                          <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
-                            <p>Date is required</p>
+                            <!-- <p>Date is required</p> -->
                          </div>
               
                     </div>
@@ -46,8 +46,8 @@
                         name="author" #author='ngModel'>
                          {{newQuote.author}}
                         <div [hidden]="author.valid || author.pristine" class ="alert alert-danger" >
-                            <p>Author name is required</p>
-        
+                            <!-- <p>Author name is required</p>
+         -->
                         </div>
               
                     </div>
@@ -60,12 +60,12 @@
                          {{newQuote.user}}
         
                         <div [hidden]="user.valid || user.pristine" class="alert alert-danger">
-                               <p>Your name is required</p>
+                               <!-- <p>Your name is required</p> -->
         
                         </div>
         
                     </div>
-                    
+
                     <button type="submit" class="btn btn-success">Add Quote</button>
         
         
